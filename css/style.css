@@ -1,6 +1,8 @@
  *  {
 
 margin: 0; /* remove as margins de todos os lados */
+padding: 0; /* remove o espaçamento interno dos elementos */
+box-sizing: border-box; /* preenchimento na borda e na largura */
 
 
 
@@ -10,33 +12,101 @@ margin: 0; /* remove as margins de todos os lados */
  
  body {
 
-background-color: DeepSkyBlue;
+
+display: flex; /* todos os elementos terao sua exibicao flexivel, ficaram agrupados em linha
+ */
+ flex-wrap: wrap; /* quebra de linha quando nao couberem na tela */
+ margin: 3px; /* margin de 3px em todos os containers */
+ flex: 1 1 100vw; 
+ /*  flex grow = habilidade de um item crescer  
+     flex-shrink = capacidade de reduçao do item
+     flex-basis = define o tamanho inicial do item */
+background-color: #a1a1a1;
+ 
+
+}
+
+
+header, nav, main, aside, footer {
+    background-color: #a1a1a1;
+    display: flex;
+    margin: 3px; 
+
 
 
 }
 
+
 header {
-
-
+   
+    flex: 1 1 100vw;
+    height: 100px ; /*para a pagina nao apresentar rolamento vertical*/
+    
 }
 
 nav {
+    
+    
+   
+    flex: 1 1 100vw;
+    height: 100px;
+   
+
+}
+
+
+main {
+
+    
+    flex: 1 1 500px;
+   height: calc(100vh - 330px); /*subtraçao de 100% da altura vertical menos a soma da altura da header, footer e da margem aplicada nos elementos   */
 
 
 
 }
-
 
 aside {
 
-
+   
+    
+   
+    flex: 1 1 200px;
+   
 
 
 }
+
 
 footer {
 
-
+   
+    
+    flex: 1 1 100vw;
+   height: 100px;
 
 
 }
+
+
+
+/* RESPONSIBLE DESIGN */
+
+
+@media only screen and ( max-width: 932px){
+
+main {
+
+height: calc(100vh - 436px);
+
+
+}
+
+aside {
+
+    flex: 1 1 100vw;
+    height: 100px;
+
+
+}
+}
+
