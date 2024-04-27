@@ -185,15 +185,16 @@ top: 15px;
 
 nav {
 
-position: fixed;
-flex-direction: column;
-width: 100vw;
-height: 100vh;
+position: fixed; /*ficando sobre os elementos da pagina*/
+flex-direction: column; /*itens em coluna*/
+width: 100vw; /*ocupar 100% da largura */
+height: 100vh; /*ocupar 100% da altura da pagina*/
 background: rgba(255, 255, 255, 0.8);
 
-align-items: center;
-justify-content: center;
-margin: 0;
+align-items: center; /*alinhar na horizontal ao centro */
+justify-content: center; /*centralizar verticalmente */
+margin: 0;  /**/
+display: none; /*    */
 
 
 
